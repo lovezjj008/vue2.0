@@ -1,5 +1,24 @@
 # vue2.0基础学习
 
+
+## 1.模板语法
+ <div v-bind = "text:data"></div>  ==> 缩写为  {{ text }} 文本插值
+ <div v-bind = "html:data"></div>  ==> 缩写为 {{ {text} }}  HTML 输出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### 学习资料
 - [vue官网](http://cn.vuejs.org)
 - [ES6语法学习](http://es6.ruanyifeng.com/)
