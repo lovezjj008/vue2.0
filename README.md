@@ -40,11 +40,52 @@
 这里， v-if 指令将根据表达式 seen 的值的真假来移除/插入 <p> 元素
 ```
 ```
-另一个例子是 v-on 指令，它用于监听 DOM 事件：
+另一个例子是 v-on 指令，它用于监听 DOM 事件：click, keyup, hover ......
 ```
 ```html
-<a v-on:click="doSomething">
+<a v-on:click="doSomething">   
+v-on缩写为 :click
 ```
+### 2.条件渲染
+1.v-if,  v-show  控制显影。
+```html
+<h1 v-if="ok">Yes</h1>
+```
+### 3.列表渲染
+v-for
+```html
+<ul id="example-1">
+  <li v-for="item in items">
+    {{ item.message }}
+  </li>
+</ul>
+
+</br>
+```
+```
+var example1 = new Vue({
+  el: '#example-1',
+  data: {
+    items: [
+      {message: 'foo' },
+      {message: 'Bar' }
+    ]
+  }
+})
+```
+结果：
+``` markdown
+foo
+Bar
+```
+```
+
+
+
+
+
+
+
 
 ### 学习资料
 - [vue官网](http://cn.vuejs.org)
