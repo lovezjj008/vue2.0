@@ -23,9 +23,7 @@
 {{ message.split('').reverse().join('') }}
 <div v-bind:id="'list-' + id"></div>
 ```
-```markdown
 这些表达式会在所属 Vue 实例的数据作用域下作为 JavaScript 被解析。有个限制就是，每个绑定都只能包含单个表达式，所以下面的例子都不会生效。
-```
 ```
 <!-- 这是语句，不是表达式 -->
 {{ var a = 1 }}
