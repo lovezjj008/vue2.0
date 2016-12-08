@@ -32,9 +32,18 @@
 ``` 
 5.指令
 指令（Directives）是带有 v- 前缀的特殊属性。
-```
+
+```html
 <p v-if="seen">Now you see me</p>
+```
+```
 这里， v-if 指令将根据表达式 seen 的值的真假来移除/插入 <p> 元素
+```
+```
+另一个例子是 v-on 指令，它用于监听 DOM 事件：
+```
+```html
+<a v-on:click="doSomething">
 ```
 
 ### 学习资料
