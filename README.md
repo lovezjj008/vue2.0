@@ -11,9 +11,11 @@
 ```html
 <span>Message: {{{msg }}}</span>   HTML 输出
 ```
-
-
-
+3.属性绑定   ==>  (href , checked, disabled, id ,title, name.......)
+不能在 HTML 属性中使用，应使用 v-bind 指令:
+```html
+<div v-bind:id="true"></div>   缩写形式：<div :id="true"></div>
+```
 
 
 
