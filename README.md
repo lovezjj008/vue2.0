@@ -78,7 +78,20 @@ var example1 = new Vue({
 foo
 Bar
 ```
+
+### 3.表单控件绑定
+你可以用 v-model 指令在表单控件元素上创建双向数据绑定
+```html
+<input v-model="message" placeholder="edit me">
+<p>Message is: {{ message }}</p>
+
+单个勾选框，逻辑值：
+
+<input type="checkbox" id="checkbox" v-model="checked">
+<label for="checkbox">{{ checked }}</label>
 ```
+
+
 
 
 
