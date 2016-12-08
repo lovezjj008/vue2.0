@@ -1,7 +1,7 @@
 # vue2.0基础学习
 
 
-## 1.模板语法
+### 1.模板语法
 ```html
 <div v-bind = "text:data"></div>  ==> 缩写为  {{ text }} 文本插值
 <div v-bind = "html:data"></div>  ==> 缩写为 {{ {text} }}  HTML 输出
