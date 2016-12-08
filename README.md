@@ -30,6 +30,12 @@
 <!-- 流控制也不会生效，请使用三元表达式 -->
 {{ if (ok) { return message } }}
 ``` 
+5.指令
+指令（Directives）是带有 v- 前缀的特殊属性。
+```
+<p v-if="seen">Now you see me</p>
+这里， v-if 指令将根据表达式 seen 的值的真假来移除/插入 <p> 元素
+```
 
 ### 学习资料
 - [vue官网](http://cn.vuejs.org)
