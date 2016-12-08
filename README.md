@@ -1,4 +1,4 @@
- #vue2.0基础学习
+ # vue2.0基础学习
 
 ### 学习资料
 - [vue官网](http://cn.vuejs.org)
