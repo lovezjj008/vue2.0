@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="//cdn.bootcss.com/vue/2.1.4/vue.js">
+	</script>
+
+      <div id="demo01">
+         <h4>模板绑定：</h4>
+      	<p>纯文本输出： {{text}}</p>
+      	<div > <span>html输出:</span> <span v-html = "html"></span></div>
+      	<h4 style="margin-top: 20px;">form绑定：</h4>
+      	<input type="text" v-model = "intext" name="" id="" value="" />
+      	<p>{{intext}}</p>
+      	 <h4>列表渲染：</h4>
+         <ul>
+           <li v-for = "iteam in list">
+             <span>name:</span> <span style="color: red;">{{iteam.name}}</span> ; age: <span style="color: red;"> {{iteam.age}}</span>
+             <span style="color: green;" v-if = "iteam.showStatus">show</span>
+             <input type="button" value="click" @click = "clickFn(iteam)"/>
+             <input type="checkbox" :checked="iteam.showStatus" />
+           </li>
+
+         </ul>
+      </div>
+
+
+  <script type="text/javascript">
+    var vm1 = new Vue({
+      el: '#demo01',
+      methods: {
+        clickFn: function (data) {
+          data.name = data.name + '*';
+          data.showStatus = !data.showStatus
+//        alert(data.name + '|' + data.age)
+        }
+      },
+      data: {
+        text: 'this is text templt',
+        html: '<span>我是<font style="color: red;">html</font>内容</span>',
+        intext: '初始值',
+        list: [
+         {'name':'name1', 'age': '10','showStatus':true},
+         {'name':'name2', 'age': '12','showStatus':true},
+         {'name':'name3', 'age': '13','showStatus':true},
+         {'name':'name4', 'age': '14','showStatus':true},
+         {'name':'name5', 'age': '15','showStatus':true},
+         {'name':'name6', 'age': '16','showStatus':true},
+         {'name':'name7', 'age': '17','showStatus':true},
+
+        ]
+      }
+    })
+
+
+  </script>
+	</body>
+</html>
