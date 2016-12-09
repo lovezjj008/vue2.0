@@ -101,6 +101,7 @@ Bar
 
 
 ### 学习资料
+- [Vue2.0 新手完全填坑攻略—从环境搭建到发布](http://www.open-open.com/lib/view/open1476240930270.html)
 - [vue官网](http://cn.vuejs.org)
 - [ES6语法学习](http://es6.ruanyifeng.com/)
 - [ESlint语法对照](http://www.tuicool.com/articles/rIFBfey)
