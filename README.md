@@ -105,7 +105,7 @@ Bar
 - [vue官网](http://cn.vuejs.org)
 - [ES6语法学习](http://es6.ruanyifeng.com/)
 - [ESlint语法对照](http://www.tuicool.com/articles/rIFBfey)
-- [UI组件:vue-strap](http://yuche.github.io/vue-strap/)
+- [UI组件:vue-strap](http://yuche.github.io/vue-strap/); element (http://element.eleme.io/#/zh-CN/component/installation)
 - [ajax调用组件:vue-resource](http://github.com)
 - [路由组件:vue-router](http://github.com)
 - [复杂状态管理:vuex](http://github.com)
