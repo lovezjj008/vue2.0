@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/bootstrap/3.0.0/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css"/>
 		<script type="text/javascript" src="//cdn.bootcss.com/vue/2.1.4/vue.js">
 		</script>
 
@@ -48,7 +49,7 @@
           <thead>
             <tr>
               <th>姓名</th>
-              <th>年龄</th>
+              <th @click = "sortAge">年龄  <span class="fa" :class="sortClass"  style="margin-left: 16px;" > </span></th>
               <th>电话</th>
               <th>操作</th>
             </tr>
@@ -63,10 +64,14 @@
           </tbody>
         </table>
 	  </div>
+	  <script type="text/javascript" src="//cdn.bootcss.com/lodash.js/4.16.1/lodash.js">
+
+	  </script>
    <script type="text/javascript">
    	  var myvue = new Vue({
    	    el: '#demo02',
         methods: {
+          // 增加数据
           joinList: function (data) {
             var getdata = {
               'name': data.name,
@@ -76,10 +81,25 @@
             this.listData.push(getdata)
             this.initInputdata()
           },
+          // 初始化
           initInputdata: function () {
             this.inputData.name = ''
             this.inputData.age = ''
             this.inputData.contact = ''
+          },
+          // 根据age排序
+          sortAge: function () {
+            if (this.sortClass == 'default') {
+              this.sortClass = 'fa-long-arrow-down';
+             this.listData =  _.orderBy(this.listData, ['age'], ['desc']);
+            } else if (this.sortClass == 'fa-long-arrow-down') {
+              this.sortClass = 'fa-long-arrow-up';
+              this.listData = _.orderBy(this.listData, ['age'], ['asc']);
+            } else if (this.sortClass == 'fa-long-arrow-up') {
+              this.sortClass = 'fa-long-arrow-down';
+              this.listData = _.orderBy(this.listData, ['age'], ['desc']);
+            }
+
           }
         },
         data: {
@@ -89,10 +109,12 @@
             contact: ''
           },
           listData: [
-           {'name':'name1', 'age': '10','contact':123456001},
-           {'name':'name2', 'age': '12','contact':123456002},
-           {'name':'name3', 'age': '13','contact':123456003},
-          ]
+           {'name':'name1', 'age': '18','contact':12345600188},
+           {'name':'name2', 'age': '19','contact':12345600277},
+           {'name':'name3', 'age': '13','contact':12345600344},
+           {'name':'name4', 'age': '23','contact':12345600333},
+          ],
+          sortClass: 'default'
         }
    	  })
    </script>
