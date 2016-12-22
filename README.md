@@ -9,7 +9,7 @@ Vue.js 和诸多 MVVM 的思路是类似的，主要做了三件事：
 
 【输入 –> 模板引擎 –> 输出】
 兼容性：ie9及以上
-### 1.语法
+### 1.常用的指令
 1.文本
 
 ```html
@@ -88,7 +88,7 @@ Bar
 ```
 
 ### 3.表单控件绑定
-你可以用 v-model 指令在表单控件元素上创建双向数据绑定
+你可以用 v-model 指令在表单控件元素上创建双向数据绑定, v-model可用于一些表单元素,常见的input,checkbox,radio,select:
 ```html
 <input v-model="message" placeholder="edit me">
 <p>Message is: {{ message }}</p>
